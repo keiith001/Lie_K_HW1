@@ -1,0 +1,45 @@
+@use "fonts";
+
+// Font Family
+$header-font: "Rebound";
+$body-font: Arial, sans-serif;
+
+// Font Size (Mobile First)
+$body: 12px;
+$header: 24px;
+$subhead: 18px;
+$display: 48px;
+$caption: 10px;
+
+// Font Size (Tablet)
+$m-body: 14px;
+$m-header: 28px;
+$m-subhead: 20px;
+$m-display: 56px;
+$m-caption: 12px;
+
+// Font Size (Desktop)
+$l-body: 16px;
+$l-header: 32px;
+$l-subhead: 24px;
+$l-display: 72px;
+$l-caption: 14px;
+
+// Colors
+// Primary
+$black: #1B1A1A;
+$white: #FFFDFB;
+
+// Primary - Accent
+$red: #AD0000;
+$blue: #5384A2;
+$orange: #F2782F;
+$brown: #D9B595;
+
+// Utility
+$darkgrey: #3e3e3e;
+$grey: rgb(139, 139, 139);
+$lightgrey: rgb(231, 231, 231);
+
+// Decoration
+$decor-post: -1;
