@@ -1,10 +1,10 @@
 (() => {
+    // Starwars API Connection
     const charCont = document.querySelector('#char-cont');
     const detailTemplate = document.querySelector('#detail-template');
     const detailCont = document.querySelector('#detail-cont');
     const baseURL = "https://swapi.dev/";
     const errorCont = document.querySelector("#error-cont");
-    const errorContDetail = document.querySelector("#error-cont-detail");
 
     function getChars() {
         // Loading Animation
@@ -35,7 +35,7 @@
                 a.textContent = char["name"];
                 a.dataset.detail = selectedFilm;
 
-                a.appendChild(img);
+                li.appendChild(img);
                 li.appendChild(a);
                 ul.appendChild(li);
             });
@@ -49,6 +49,30 @@
         .then(function() {
             const links = document.querySelectorAll("#char-cont li a");
             console.log(links);
+
+            // GSAP Animation
+            links.forEach(function(link) {
+                const hoverAnim = gsap.timeline({ paused: true});
+
+                hoverAnim.to(link, {
+                    backgroundColor: "#fbff00",
+                    color: "#000",
+                    borderColor: "#fbff00",
+                    duration: 0.5,
+                    ease: "power2.out"
+                });
+
+                function playHover() {
+                    hoverAnim.play();
+                }
+            
+                function reverseHover() {
+                    hoverAnim.reverse();
+                }
+
+                link.addEventListener("mouseenter", playHover);
+                link.addEventListener("mouseleave", reverseHover);
+            })
 
             links.forEach(function(link) {
                 link.addEventListener("click", getDetails);
@@ -105,6 +129,9 @@
             detailImg.appendChild(img);
 
             detailCont.appendChild(clone);
+
+            // Scroll to specified section
+            document.querySelector("#details").scrollIntoView({ behavior: "smooth" });
         })
         .catch(function(error) {
             detailCont.innerHTML = "Detail is not available for this character, or it might have some error on our side.";
@@ -112,5 +139,60 @@
     }
     
     getChars();
+
+    // Stars Background Animation
+    const starsCont = document.querySelector('#whole-cont');
+    const starsAmount = 250;
+    const maxSize = 5;
+    const minSize = 1;
+    const maxDuration = 7;
+    const minDuration = 3;
+    
+    function spawnStars() {
+        const star = document.createElement("div");
+        star.classList.add("star");
+
+        // Star Position
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+
+        // Randomize size of the star
+        const size = Math.random() * (maxSize - minSize) + minSize;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+
+        // Initial Position
+        star.style.left = `${posX}px`;
+        star.style.top = `${posY}px`;
+
+        starsCont.appendChild(star);
+        animateStar(star);
+    }
+
+    function animateStar(star) {
+        const duration = Math.random() * (maxDuration - minDuration) + minDuration;
+    
+        gsap.to(star, {
+            opacity: 0,  
+            yoyo: true, 
+            repeat: -1, 
+            duration: duration,
+            ease: "power1.inOut", 
+            delay: Math.random() * 5
+        });
+    }
+
+    function generateStars() {
+        for (let i = 0; i < starsAmount; i++) {
+            spawnStars();
+        }
+    }
+
+    window.addEventListener('load', generateStars);
+
+
+
+    // console.log(gsap);
+
 
 })();

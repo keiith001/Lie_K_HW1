@@ -5,17 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/main.css" rel="stylesheet">
+
+    <!-- GSAP Library -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script defer src="js/main.js"></script>
   </head>
-  <body>
+  <body id="whole-cont">
       <h1 class="hidden">Starwars Characters in Pixel Art</h1>
+    <div id="hero">
       <img src="./images/logo/SVG/starwars-yellow.svg" alt="Starwars Logo">
+      
+      <p class="body-text container-1 orient-center text-center">Try clicking young favourite Starwars Character! You will find out the details later on.</p>
+    </div>
 
-    <section class="grid-con">
+    <section id="content" class="grid-con">
       <h2 class="hidden">Character Lists</h2>
       <!-- Characters -->
-      <div class="col-span-full m-col-span-6">
-        <h3>Characters</h3>
+      <div id="characters" class="col-span-full m-col-start-2 m-col-span-5">
+        <h3 class="display">Characters</h3>
         <div id="error-cont">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="#FFFD00" stroke="#FFFD00" stroke-width="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#FFFD00" stroke="#FFFD00" stroke-width="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#FFFD00" stroke="#FFFD00" stroke-width="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
         </div>
@@ -25,8 +32,8 @@
       </div>
 
       <!-- Details -->
-      <div class="col-span-full m-col-span-6">
-        <h3>Details</h3>
+      <div id="details" class="col-span-full m-col-start-7 m-col-span-5">
+        <h3 class="display">Details</h3>
         <div id="detail-cont">
 
         </div>
@@ -35,12 +42,12 @@
         <template id="detail-template">
           <section>
             <div class="detail-img"></div>
-            <h4 class="detail-title"></h4>
-            <p class="detail-opening"></p>
+            <h4 class="detail-title sub-head"></h4>
+            <p class="detail-opening body-text"></p>
             <br>
-            <p class="detail-director"></p>
-            <p class="detail-producer"></p>
-            <p class="detail-release"></p>
+            <p class="detail-director body-text"></p>
+            <p class="detail-producer body-text"></p>
+            <p class="detail-release body-text"></p>
           </section>
         </template>
       </div>
