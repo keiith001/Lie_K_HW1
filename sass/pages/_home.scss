@@ -1,3 +1,142 @@
 @use "../abstracts/variables" as v;
 
+body {
+    background-color: v.$black;
+}
+
 // Mobile Style
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        margin-top: 32px;
+        width: 200px;
+    }
+}
+
+#characters {
+    padding: 16px;
+    border: v.$yellow solid 1px;
+    margin: 4px;
+    backdrop-filter: blur(4px);
+
+    h3 {
+        padding: 6px;
+        background-color: v.$yellow;
+        color: v.$black;
+        text-align: center;
+    }
+}
+
+#char-cont {
+    ul {
+        list-style-type: none;
+
+        li {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            margin-bottom: 16px;
+
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+
+                padding: 6px;
+                border: v.$white solid 1px;
+            }
+
+            a {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                margin-left: 16px;
+                font-family: v.$body-font;
+                font-size: v.$subhead;
+                color: v.$white;
+
+                padding: 8px 12px;
+                border: v.$white solid 1px;
+
+                background-color: transparent;
+                transition: color 0.3s ease;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            a::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #FFDD00; 
+                z-index: -1; 
+
+                transform: translateX(-100%); 
+                transition: transform 0.3s ease;
+            }
+
+            a:hover::before {
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+#details {
+    padding: 16px;
+    border: v.$yellow solid 1px;
+    margin: 4px;
+    backdrop-filter: blur(4px);
+
+    h3 {
+        padding: 6px;
+        background-color: v.$yellow;
+        color: v.$black;
+        text-align: center;
+    }
+
+    h4 {
+        margin-bottom: 6px;
+        color: v.$yellow;
+    }
+
+    img {
+        width: 75%;
+        height: auto;
+        margin-bottom: 12px;
+    }
+}
+
+// Tablet Size
+@media screen and (min-width: 768px) {
+    #char-cont {
+        ul {
+            list-style-type: none;
+    
+            li {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                margin-bottom: 16px;
+    
+                img {
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+    
+                    padding: 6px;
+                    border: v.$white solid 1px;
+                }
+            }
+        }
+    }
+}

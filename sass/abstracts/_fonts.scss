@@ -1,9 +1,17 @@
 // Headline/Display - Rebound
 // ==================================
 
-// Regular
+// Headline
 @font-face {
-  font-family: "Pixel Space";
+  font-family: "Pixelad";
+  src: url("../fonts/Pixelad.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+// Body
+@font-face {
+  font-family: "Pixel-Space";
   src: url("../fonts/Pixel-Space.woff2") format("woff2"),
     url("../fonts/Pixel-Space.woff") format("woff");
   font-weight: 600;

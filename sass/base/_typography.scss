@@ -4,42 +4,42 @@
 .display {
     font-family: v.$header-font;
     font-size: v.$display;
-    color: v.$black;
+    color: v.$yellow;
     margin-bottom: 12px;
     letter-spacing: 2px;
 }
 
 .header {
     font-family: v.$header-font;
-    font-size: v.$header;
-    color: v.$black;
+    font-size: v.$body-font;
+    color: v.$white;
 }
 
 .sub-head {
-    font-family: v.$header-font;
+    font-family: v.$body-font;
     font-size: v.$subhead;
-    color: v.$black;
+    color: v.$white;
 }
 
 .body-text {
     font-family: v.$body-font;
     font-size: v.$body;
     font-weight: 400;
-    color: v.$darkgrey;
+    color: v.$white;
     line-height: 14px;
 }
 
 .caption {
     font-family: v.$body-font;
     font-size: v.$caption;
-    color: v.$darkgrey;
+    color: v.$white;
     line-height: 14px;
 }
 
 .letter-author {
     font-family: v.$header-font;
     font-size: v.$body;
-    color: v.$darkgrey;
+    color: v.$white;
     line-height: 14px;
 }
 
@@ -60,33 +60,33 @@
     .display {
         font-family: v.$header-font;
         font-size: v.$m-display;
-        color: v.$black;
+        color: v.$yellow;
         margin-bottom: 14px;
     }
     
     .header {
-        font-family: v.$header-font;
+        font-family: v.$body-font;
         font-size: v.$m-header;
-        color: v.$black;
+        color: v.$white;
     }
     
     .sub-head {
-        font-family: v.$header-font;
+        font-family: v.$body-font;
         font-size: v.$m-subhead;
-        color: v.$black;
+        color: v.$white;
     }
     
     .body-text {
         font-family: v.$body-font;
         font-size: v.$m-body;
-        color: v.$darkgrey;
+        color: v.$white;
         line-height: 18px;
     }
 
     .caption {
         font-family: v.$body-font;
         font-size: v.$m-caption;
-        color: v.$darkgrey;
+        color: v.$white;
         line-height: 14px;
     }
 }
@@ -96,33 +96,33 @@
     .display {
         font-family: v.$header-font;
         font-size: v.$l-display;
-        color: v.$black;
+        color: v.$yellow;
         margin-bottom: 18px;
     }
     
     .header {
-        font-family: v.$header-font;
+        font-family: v.$body-font;
         font-size: v.$l-header;
-        color: v.$black;
+        color: v.$white;
     }
     
     .sub-head {
-        font-family: v.$header-font;
+        font-family: v.$body-font;
         font-size: v.$l-subhead;
-        color: v.$black;
+        color: v.$white;
     }
     
     .body-text {
         font-family: v.$body-font;
         font-size: v.$l-body;
-        color: v.$darkgrey;
+        color: v.$white;
         line-height: 20px;
     }
 
     .caption {
         font-family: v.$body-font;
         font-size: v.$l-caption;
-        color: v.$darkgrey;
+        color: v.$white;
         line-height: 14px;
     }
 }
