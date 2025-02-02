@@ -1,0 +1,12 @@
+#error-cont {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    
+    p {
+        margin-top: 10px;
+        padding: 0 30px;
+        font-size: 16px;
+        text-align: center;
+    }
+}
