@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Movie API</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet">
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+      <h1 class="hidden">Starwars Characters in Pixel Art</h1>
+      <img src="./images/logo/SVG/starwars-yellow.svg" alt="Starwars Logo">
+
+    <section class="grid-con">
+      <h2 class="hidden">Character Lists</h2>
+      <!-- Characters -->
+      <div class="col-span-full m-col-span-6">
+        <h3>Characters</h3>
+        <div id="error-cont">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="#FFFD00" stroke="#FFFD00" stroke-width="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#FFFD00" stroke="#FFFD00" stroke-width="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#FFFD00" stroke="#FFFD00" stroke-width="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
+        </div>
+        <div id="char-cont">
+
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div class="col-span-full m-col-span-6">
+        <h3>Details</h3>
+        <div id="detail-cont">
+
+        </div>
+
+        <!-- Details Template -->
+        <template id="detail-template">
+          <section>
+            <div class="detail-img"></div>
+            <h4 class="detail-title"></h4>
+            <p class="detail-opening"></p>
+            <br>
+            <p class="detail-director"></p>
+            <p class="detail-producer"></p>
+            <p class="detail-release"></p>
+          </section>
+        </template>
+      </div>
+    </section>
+  </body>
+</html>
